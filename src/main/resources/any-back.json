@@ -1,0 +1,75 @@
+{
+    "actions" : [
+        {
+            "configuration" : {
+                "productId" : "product_mqtt_1",
+                "message" : {
+                    "functionId" : "juanbei",
+                    "messageType" : "INVOKE_FUNCTION",
+                    "inputs" : [
+                        {
+                            "name" : "打开",
+                            "value" : "0103060001C546"
+                        }
+                    ]
+                },
+                "deviceId" : "289C6E2ECFE40"
+            },
+            "executor" : "device-message-sender"
+        },
+        {
+            "configuration" : {
+                "type" : "delay",
+                "pauseType" : "delay",
+                "errorOnDrop" : true,
+                "timeoutUnits" : "Seconds",
+                "timeout" : 5
+            },
+            "executor" : "delay"
+        },
+        {
+            "configuration" : {
+                "message" : {
+                    "messageType" : "INVOKE_FUNCTION",
+                    "functionId" : "juanbei",
+                    "inputs" : [
+                        {
+                            "name" : "关闭",
+                            "value" : "0103060000C546"
+                        }
+                    ]
+                },
+                "deviceId" : "289C6E2ECFE40",
+                "productId" : "product_mqtt_1"
+            },
+            "executor" : "device-message-sender"
+        }
+    ],
+    "id" : "sceneid",
+    "name" : "scenename",
+    "parallel" : false,
+    "triggers" : [
+        {
+            "device" : {
+                "deviceId" : "289C6E2ECFE40",
+                "filters" : [
+                    {
+                        "key" : "temp",
+                        "operator" : "gt",
+                        "value" : "100"
+                    }
+                ],
+                "modelId" : "temp",
+                "productId" : "product_mqtt_1",
+                "shakeLimit" : {
+                    "alarmFirst" : false,
+                    "enabled" : false,
+                    "threshold" : 0,
+                    "time" : 0
+                },
+                "type" : "properties"
+            },
+            "trigger" : "device"
+        }
+    ]
+}

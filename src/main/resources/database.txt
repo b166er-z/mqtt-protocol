@@ -1,0 +1,5 @@
+drop trigger if exists device_instance_state;
+create trigger device_instance_state after update on dev_device_instance for each row
+begin
+	update led_instance set state=NEW.state where id=NEW.id;
+end;

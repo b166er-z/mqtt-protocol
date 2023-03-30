@@ -1,0 +1,59 @@
+{
+    "flows" : [
+        {
+            "id" : "test",
+            "type" : "tab",
+            "label" : "test",
+            "disabled" : false
+        },
+        {
+            "id" : "b8e8be45.068b2",
+            "type" : "delay",
+            "z" : "test",
+            "name" : "bbb",
+            "groupExpression" : "",
+            "pauseType" : "delay",
+            "timeout" : "5",
+            "timeoutUnits" : "seconds",
+            "rate" : "1",
+            "nbRateUnits" : "1",
+            "rateUnits" : "seconds",
+            "randomFirst" : "1",
+            "randomLast" : "5",
+            "randomUnits" : "seconds",
+            "errorOnDrop" : true,
+            "x" : 450,
+            "y" : 240,
+            "wires" : [
+                [
+                    "95235a62.ac5728"
+                ]
+            ],
+            "inputLabels" : [
+                "aaain"
+            ],
+            "outputLabels" : [
+                "aaaout"
+            ]
+        },
+        {
+            "id" : "95235a62.ac5728",
+            "type" : "device-message-sender",
+            "z" : "test",
+            "stateOperator" : "ignoreOffline",
+            "waitType" : "forget",
+            "from" : "fixed",
+            "name" : "ccc",
+            "timeout" : "10s",
+            "message" : "{\n \"messageType\":\"READ_PROPERTY\",\n \"deviceId\":\"设备ID\",\n \"properties\":[\"temp\"]\n}",
+            "noerr" : 0,
+            "selector" : "289C6E2ECFE40",
+            "x" : 630,
+            "y" : 240,
+            "wires" : [
+                []
+            ]
+        }
+    ],
+    "rev" : "2650f4509bf87121b31568e343e53e08"
+}

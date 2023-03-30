@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="elasticsearch-component" />
+        <module name="http-component" />
+        <module name="kafka-component" />
+        <module name="rule-engine-manager" />
+        <module name="mqtt-component" />
+        <module name="timeseries-component" />
+        <module name="tcp-component" />
+        <module name="notify-manager" />
+        <module name="demo-protocol" />
+        <module name="mqtt-protocol" />
+        <module name="authentication-manager" />
+        <module name="influxdb-component" />
+        <module name="network-core" />
+        <module name="notify-network" />
+        <module name="logging-manager" />
+        <module name="tenant-component" />
+        <module name="jetlinks-openapi-core" />
+        <module name="rule-engine-component" />
+        <module name="jetlinks-official-protocol" />
+        <module name="simulator-component" />
+        <module name="dashboard-component" />
+        <module name="common-component" />
+        <module name="websocket-component" />
+        <module name="network-manager" />
+        <module name="rabbitmq-component" />
+        <module name="coap-component" />
+        <module name="streaming-component" />
+        <module name="test" />
+        <module name="gateway-component" />
+        <module name="notify-wechat" />
+        <module name="jetlinks-openapi-manager" />
+        <module name="jetlinks-standalone" />
+        <module name="io-component" />
+        <module name="tdengine-component" />
+        <module name="notify-dingtalk" />
+        <module name="notify-sms" />
+        <module name="geo-component" />
+        <module name="notify-voice" />
+        <module name="plugin-component" />
+        <module name="logging-component" />
+        <module name="notify-email" />
+        <module name="notify-core" />
+        <module name="visualization-manager" />
+        <module name="protocol-component" />
+        <module name="udp-component" />
+        <module name="device-manager" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>
